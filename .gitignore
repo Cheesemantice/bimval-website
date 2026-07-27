@@ -1,7 +1,10 @@
-# Utasítások, útmutatók és zip csomagok
-FORPSI_TELEPITESI_UTMUTATO.md
-GITHUB_PAGES_UTMUTATO.md
-forpsi_landing_page.zip
+# Belső dokumentációk, leírások, nyers asset-ek és archívumok (SOHA nem kerülnek fel Git-re)
+_docs_and_raw_assets/
+_internal/
+_docs/
+
+# Utasítások és csomagok
+*.md
 *.zip
 Logó/
 
