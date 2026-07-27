@@ -1,0 +1,12 @@
+# Utasítások, útmutatók és zip csomagok
+FORPSI_TELEPITESI_UTMUTATO.md
+GITHUB_PAGES_UTMUTATO.md
+forpsi_landing_page.zip
+*.zip
+Logó/
+
+# OS & Temp fájlok
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
