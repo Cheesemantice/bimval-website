@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Bimval | BIM Felmérés & Építészeti Tervezés</title>
+    <meta name="description" content="A Bimval egyéni vállalkozás hivatalos weboldala. Szakterületünk: BIM felmérés, 3D pontfelhő feldolgozás és építészeti tervezés. Weboldalunk hamarosan elindul!">
+    <meta name="keywords" content="Bimval, BIM felmérés, építészeti tervezés, 3D modellezés, pontfelhő, lézerszkennelés, egyéni vállalkozó, építészet">
+    <meta name="author" content="Bimval - Egyéni Vállalkozás">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bimval | BIM Felmérés & Építészeti Tervezés">
+    <meta property="og:description" content="Precíz BIM épületfelmérés, 3D modellezés és építészeti tervezés. Weboldalunk hamarosan elérhető.">
+    <meta property="og:image" content="assets/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Background Ambient Glow & Blueprint Grid -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-grid"></div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-wrapper">
+                <img src="assets/logo.png" alt="Bimval Logó" class="main-logo">
+            </div>
+            <div class="brand-tag">BIM FELMÉRÉS &bull; ÉPÍTÉSZETI TERVEZÉS</div>
+        </header>
+
+        <!-- Main Hero Section -->
+        <main class="hero-card glass-panel">
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>Weboldal fejlesztés alatt</span>
+            </div>
+
+            <h1 class="hero-title">
+                BIM Felmérés & Építészeti Tervezés — <br>Hamarosan elindul a <span class="text-gradient">Bimval</span>
+            </h1>
+
+            <p class="hero-description">
+                Üdvözöljük! Gőzerővel dolgozunk azon, hogy vállalkozásunk szolgáltatásait — a milliméter-pontos 
+                <strong>BIM épületfelméréstől</strong>, 3D pontfelhő-feldolgozástól a komplett <strong>építészeti tervezésig</strong> — 
+                egy modern, letisztult felületen mutathassuk be Önnek.
+            </p>
+
+            <!-- Launch Features / Services Grid -->
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>BIM Felmérés & Szkennelés</h3>
+                        <p>Meglévő épületek milliméter-pontos 3D felmérése és pontfelhő rögzítése.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>3D Épületmodellezés</h3>
+                        <p>Részletgazdag, intelligens BIM (Building Information Modeling) modellek készítése.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Építészeti Tervezés</h3>
+                        <p>Koncepciótervek, engedélyezési és kiviteli dokumentációk készítése.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact & Notification Box -->
+            <div class="action-box">
+                <div class="action-header">
+                    <h2>Kérdése van vagy projektet egyeztetne velünk?</h2>
+                    <p>Hagyja meg e-mail címét a nyitási értesítésért, vagy lépjen velünk közvetlenül kapcsolatba!</p>
+                </div>
+
+                <form id="notify-form" class="subscribe-form">
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope input-icon"></i>
+                        <input type="email" id="email-input" placeholder="Adja meg e-mail címét..." required>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Értesítést kérek</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p id="form-message" class="form-message"></p>
+                </form>
+
+                <!-- Direct Contact Buttons -->
+                <div class="contact-buttons">
+                    <a href="mailto:terv@bimval.hu" class="btn btn-secondary contact-btn" id="email-contact-link">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>terv@bimval.hu</span>
+                    </a>
+                    <button class="btn btn-secondary contact-btn" id="info-modal-btn">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Céginformációk</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; <span id="current-year">2026</span> Bimval Egyéni Vállalkozó &bull; BIM Felmérés & Építészeti Tervezés</p>
+        </footer>
+    </div>
+
+    <!-- Info Modal -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <img src="assets/logo.png" alt="Bimval Logó" class="modal-logo">
+                <h2>Bimval Egyéni Vállalkozás</h2>
+                <p class="modal-subtitle">BIM Felmérés & Építészeti Tervezés</p>
+            </div>
+            <div class="modal-body">
+                <div class="info-row">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <div>
+                        <strong>Vállalkozási forma:</strong>
+                        <p>Egyéni Vállalkozó</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    <div>
+                        <strong>Fő tevékenység:</strong>
+                        <p>BIM épületfelmérés, 3D modellezés & Építészeti tervezés</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>E-mail cím:</strong>
+                        <p><a href="mailto:terv@bimval.hu">terv@bimval.hu</a></p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <i class="fa-solid fa-server"></i>
+                    <div>
+                        <strong>Tárhely szolgáltató:</strong>
+                        <p>Forpsi (IT-INIC Kft.)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="modal-ok-btn">Rendben</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>
