@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.warn('LocalStorage not available', err);
             }
 
-            showFormMessage('Köszönjük! Értesítjük, amint a weboldal elindul.', 'success');
+            showFormMessage('Köszönjük! Értesítjük, amint a weboldal elérhetővé válik.', 'success');
             emailInput.value = '';
         });
     }
