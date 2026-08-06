@@ -1,4 +1,4 @@
-// Bimval Landing Page Interactive JavaScript
+// BIMVal Landing Page Interactive JavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Update current year automatically
@@ -47,18 +47,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3. Notification Form Handler
+    // 3. Contact & Order Form Handler
     const notifyForm = document.getElementById('notify-form');
     const emailInput = document.getElementById('email-input');
+    const messageInput = document.getElementById('message-input');
     const formMessage = document.getElementById('form-message');
 
     if (notifyForm) {
         notifyForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const email = emailInput.value.trim();
+            const email = emailInput ? emailInput.value.trim() : '';
+            const message = messageInput ? messageInput.value.trim() : '';
 
             if (!email) {
                 showFormMessage('Kérjük, adja meg e-mail címét!', 'error');
+                if (emailInput) emailInput.focus();
                 return;
             }
 
@@ -66,30 +69,35 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 showFormMessage('Kérjük, érvényes e-mail címet adjon meg!', 'error');
+                if (emailInput) emailInput.focus();
                 return;
             }
 
-            // Save email locally for demo & show success message
+            // Save submissions locally for demo & show success message
             try {
-                let savedEmails = JSON.parse(localStorage.getItem('bimval_subscribers') || '[]');
-                if (!savedEmails.includes(email)) {
-                    savedEmails.push(email);
-                    localStorage.setItem('bimval_subscribers', JSON.stringify(savedEmails));
-                }
+                let submissions = JSON.parse(localStorage.getItem('bimval_contact_requests') || '[]');
+                submissions.push({
+                    email: email,
+                    message: message,
+                    date: new Date().toISOString()
+                });
+                localStorage.setItem('bimval_contact_requests', JSON.stringify(submissions));
             } catch (err) {
                 console.warn('LocalStorage not available', err);
             }
 
-            showFormMessage('Köszönjük! Értesítjük, amint a weboldal elérhetővé válik.', 'success');
-            emailInput.value = '';
+            showFormMessage('Köszönjük! Üzenetét rögzítettük, hamarosan felvesszük Önnel a kapcsolatot.', 'success');
+            if (emailInput) emailInput.value = '';
+            if (messageInput) messageInput.value = '';
         });
     }
 
     function showFormMessage(text, type) {
         if (!formMessage) return;
+        formMessage.style.display = 'block';
         formMessage.textContent = text;
         formMessage.className = `form-message ${type}`;
-        
+
         setTimeout(() => {
             if (type === 'error') {
                 formMessage.style.display = 'none';

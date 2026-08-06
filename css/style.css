@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Bimval Landing Page - Architectural & BIM Light Theme
-   Color Palette inspired by the Bimval Logo:
+   BIMVal Landing Page - Architectural & BIM Light Theme
+   Color Palette inspired by the BIMVal Logo:
    - Light Architectural Canvas: #f8fafc, #f1f5f9
    - Deep Slate Typography: #0f172a, #334155, #475569
    - Champagne Gold Accent: #b45309, #d4af37, #b8860b
@@ -13,25 +13,25 @@
     --bg-card: rgba(255, 255, 255, 0.85);
     --bg-card-hover: rgba(255, 255, 255, 0.96);
 
-    --border-color: rgba(212, 175, 55, 0.35);
+    --border-color: rgba(198, 168, 110, 0.32);
     --border-subtle: rgba(15, 23, 42, 0.08);
-    --border-glow: rgba(212, 175, 55, 0.7);
+    --border-glow: rgba(198, 168, 110, 0.55);
 
-    --accent-gold: #b45309;
-    --accent-gold-bright: #d4af37;
-    --accent-gold-light: #fffbeb;
-    --accent-gold-dark: #78350f;
+    --accent-gold: #ab8b4c;
+    --accent-gold-bright: #d4bf8f;
+    --accent-gold-light: #fbf7ef;
+    --accent-gold-dark: #735a2b;
 
     --text-main: #0f172a;
     --text-muted: #475569;
-    --text-gold: #b45309;
+    --text-gold: #9e7f3f;
 
     --success-green: #059669;
     --error-red: #dc2626;
 
     /* Fonts & Radii */
-    --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --font-heading: 'Space Grotesk', var(--font-primary);
+    --font-primary: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
     --radius-lg: 24px;
     --radius-md: 14px;
     --radius-sm: 8px;
@@ -63,6 +63,9 @@ body {
     overflow-x: hidden;
     position: relative;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* Dynamic Background Glows & Architectural Blueprint Grid */
@@ -168,15 +171,21 @@ body {
 }
 
 .brand-tag {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 2.5px;
-    color: var(--accent-gold);
+    letter-spacing: 2px;
+    color: #9e7f3f;
     text-transform: uppercase;
     background: var(--accent-gold-light);
-    padding: 5px 16px;
-    border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 8px 20px;
+    border-radius: 18px;
+    border: 1px solid rgba(198, 168, 110, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    line-height: 1.35;
+    text-align: center;
 }
 
 /* Hero Section */
@@ -192,26 +201,27 @@ body {
     animation: fadeInUp 0.9s ease-out;
 }
 
-/* Status Badge */
+/* Status Badge - Muted Cream Gold Theme */
 .status-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    background: rgba(5, 150, 105, 0.08);
-    border: 1px solid rgba(5, 150, 105, 0.25);
-    color: var(--success-green);
-    padding: 6px 16px;
+    gap: 0.55rem;
+    background: rgba(198, 168, 110, 0.12);
+    border: 1px solid rgba(198, 168, 110, 0.35);
+    color: #9e7f3f;
+    padding: 7px 18px;
     border-radius: 30px;
     font-size: 0.85rem;
     font-weight: 600;
+    letter-spacing: 0.2px;
 }
 
 .status-dot {
     width: 8px;
     height: 8px;
-    background-color: var(--success-green);
+    background-color: #c9af75;
     border-radius: 50%;
-    box-shadow: 0 0 8px var(--success-green);
+    box-shadow: 0 0 10px rgba(201, 175, 117, 0.7);
     animation: blink 1.8s infinite;
 }
 
@@ -231,7 +241,7 @@ body {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #92400e 100%);
+    background: linear-gradient(135deg, #c9af75 0%, #9e7f3f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -327,46 +337,89 @@ body {
     color: var(--text-muted);
 }
 
-/* Subscribe Form */
+/* Subscribe / Contact Form */
 .subscribe-form {
     width: 100%;
     max-width: 520px;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .input-group {
     position: relative;
+    width: 100%;
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
 }
 
 .input-icon {
     position: absolute;
     left: 16px;
+    top: 16px;
     color: var(--text-muted);
     font-size: 1.1rem;
     pointer-events: none;
+    z-index: 2;
 }
 
 .subscribe-form input {
     width: 100%;
-    padding: 0.9rem 1rem 0.9rem 46px;
+    height: 52px;
+    padding: 0 1rem 0 48px;
     background: #ffffff;
     border: 1px solid rgba(15, 23, 42, 0.15);
     border-radius: var(--radius-md);
     color: var(--text-main);
     font-size: 0.95rem;
+    font-family: var(--font-primary);
     outline: none;
     transition: var(--transition);
+    box-sizing: border-box;
 }
 
-.subscribe-form input:focus {
+.subscribe-form textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 14px 1rem 14px 48px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.15);
+    border-radius: var(--radius-md);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-family: var(--font-primary);
+    line-height: 1.5;
+    outline: none;
+    resize: vertical;
+    transition: var(--transition);
+    box-sizing: border-box;
+}
+
+.subscribe-form input:focus,
+.subscribe-form textarea:focus {
     border-color: var(--accent-gold);
     background: #ffffff;
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.subscribe-form input:focus,
+.subscribe-form textarea:focus {
+    border-color: var(--accent-gold);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 0.25rem;
 }
 
 /* Buttons */
@@ -387,15 +440,15 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #d4af37 0%, #b45309 100%);
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(180, 83, 9, 0.25);
+    background: linear-gradient(135deg, #dec897 0%, #be9f60 100%);
+    color: #2a2111;
+    box-shadow: 0 4px 15px rgba(190, 159, 96, 0.28);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(180, 83, 9, 0.4);
-    background: linear-gradient(135deg, #e8c458 0%, #92400e 100%);
+    box-shadow: 0 6px 20px rgba(190, 159, 96, 0.4);
+    background: linear-gradient(135deg, #e8d5aa 0%, #af8e4d 100%);
 }
 
 .btn-secondary {
@@ -439,10 +492,38 @@ body {
 
 /* Footer */
 .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
     text-align: center;
     color: var(--text-muted);
     font-size: 0.875rem;
     margin-top: 1rem;
+}
+
+.footer-btn {
+    background: #ffffff;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+
+.footer-btn:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    background: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
 }
 
 /* Modal */

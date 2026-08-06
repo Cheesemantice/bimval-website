@@ -13,3 +13,9 @@ Logó/
 Thumbs.db
 .vscode/
 .idea/
+
+# Helyi indító szkriptek (localhost server)
+start_server.bat
+*.bat
+*.ps1
+serve.py
